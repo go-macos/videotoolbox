@@ -1,0 +1,97 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  gofmt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: stable
+      - name: gofmt
+        run: |
+          unformatted=$(gofmt -l .)
+          if [ -n "$unformatted" ]; then
+            echo "::error::these files are not gofmt-clean:"; echo "$unformatted"
+            exit 1
+          fi
+      - name: go.mod is tidy
+        run: |
+          go mod tidy
+          git diff --exit-code go.mod go.sum
+
+  # The real VideoToolbox lane. A runner has no video file, so the live decode
+  # test skips itself; what runs here is the portable logic plus a REAL
+  # decompression session built from an eleven-byte parameter set pair, and
+  # every failure path reachable without media.
+  darwin:
+    name: darwin (real VideoToolbox, CGO=0)
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: stable
+      - run: CGO_ENABLED=0 go vet ./...
+      - run: CGO_ENABLED=0 go build ./...
+      - name: Test
+        run: CGO_ENABLED=0 go test -count=1 -coverprofile=cover.out ./...
+      - name: Race (CGO=1)
+        run: CGO_ENABLED=1 go test -race -count=1 ./...
+      # The gate is on the PORTABLE file, not the total. The purego bindings
+      # cannot be fully covered without media on the runner, and a
+      # total-coverage gate would either be a lie or force a video file into
+      # the repository.
+      - name: 100% coverage gate on the portable layer
+        shell: bash
+        run: |
+          go tool cover -func=cover.out | grep '/videotoolbox.go:' > portable.txt
+          cat portable.txt
+          if grep -v '100.0%' portable.txt; then
+            echo "::error::the portable layer is below 100% (lines above)"; exit 1
+          fi
+          echo "portable layer: 100%"
+      - name: Coverage summary (whole package, bindings included)
+        run: go tool cover -func=cover.out | tail -1
+
+  # Every non-darwin platform must compile and answer ErrUnsupported rather
+  # than failing to build: a consumer cross-compiles this without thinking
+  # about it.
+  cross:
+    name: cross ${{ matrix.goos }}/${{ matrix.goarch }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { goos: linux, goarch: amd64 }
+          - { goos: linux, goarch: arm64 }
+          - { goos: windows, goarch: amd64 }
+          - { goos: darwin, goarch: amd64 }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: stable
+      - run: CGO_ENABLED=0 GOOS=${{ matrix.goos }} GOARCH=${{ matrix.goarch }} go build ./...
+      - run: CGO_ENABLED=0 GOOS=${{ matrix.goos }} GOARCH=${{ matrix.goarch }} go vet ./...
+
+  linux:
+    name: linux (stub tests)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: stable
+      - run: CGO_ENABLED=0 go test -count=1 ./...
