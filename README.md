@@ -117,13 +117,20 @@ M4 Max, `CGO_ENABLED=0`, decoding through the public API of this package and of
 | 4-minute presentation | MP4, H.264 720p | 7 740 / 7 740 | 965 fps, 32× real time |
 | screencast | **MKV**, H.264 1080p | 3 279 / 3 279 | 537 fps, 9× real time |
 | feature film, 1 h 32 | **MKV**, H.264 720p, 2.0 GB | 133 389 / 133 389 | 805 fps, 34× real time |
+| 8-second clip | MP4, HEVC 720p | 240 / 240 | — |
+| the same clip, remuxed | **MKV**, HEVC 720p | 240 / 240 | 1013 fps, 34× real time |
 
-The first ten frames of the MP4 are **byte-for-byte identical** to the same ten
-decoded by AVFoundation, which is the control this was built against: a decoder
-that is wrong is wrong everywhere, and a Matroska path that cannot reproduce a
-known-good MP4 result has not proved anything.
+The first ten frames of the H.264 MP4, and the first five of the HEVC one, are
+**byte-for-byte identical** to the same frames decoded by AVFoundation. That is
+the control this was built against: a decoder that is wrong is wrong everywhere,
+and a Matroska path that cannot reproduce a known-good MP4 result has not proved
+anything.
 
-`avfoundation` reaches 2165 fps on that same MP4. The difference is this
+The HEVC pair is the whole argument in two lines. Remuxed into Matroska — same
+samples, same parameter sets, different container — the file still decodes here,
+frame for frame, and `avprobe` answers `file has no video track`.
+
+`avfoundation` reaches 2165 fps on the H.264 MP4. The difference is this
 package's shape, not the decoder's: it waits for each frame before returning it,
 so the caller gets its picture from the call that submitted the sample rather
 than from a queue it has to manage.
