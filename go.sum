@@ -12,8 +12,8 @@ github.com/ebitengine/purego v0.10.2 h1:W809HbnvzAxgdm+aOvlSekrM16wGCdT/e76+9tS7
 github.com/ebitengine/purego v0.10.2/go.mod h1:iIjxzd6CiRiOG0UyXP+V1+jWqUXVjPKLAI0mRfJZTmQ=
 github.com/go-avkit/avkit v0.0.0-20260822082210-a77a82116774 h1:QfcpZqJHYfk118Zx4w2ofxUIr1hYSzFZZ0/Zk7cGwbQ=
 github.com/go-avkit/avkit v0.0.0-20260822082210-a77a82116774/go.mod h1:25b9f05nWlU8dX9Op//9qZJgxFjpv9R0qmIUWtWo3vc=
-github.com/go-macos/objc v0.2.0 h1:uDFsiCMQT66A3E7dFsVYrnVOk3BQxpkhfwZJCtYuWq8=
-github.com/go-macos/objc v0.2.0/go.mod h1:00GJyieLzPcb65rPLVWNPPUCVm79nmmiEXUDsslRpOs=
+github.com/go-macos/objc v0.4.0 h1:SjL67emvTtDl2C++5HkIoegjFpayAMgd3IQTDYpCLXs=
+github.com/go-macos/objc v0.4.0/go.mod h1:00GJyieLzPcb65rPLVWNPPUCVm79nmmiEXUDsslRpOs=
 github.com/go-test/deep v1.1.0 h1:WOcxcdHcvdgThNXjw0t76K42FXTU7HpNQWHpA2HHNlg=
 github.com/go-test/deep v1.1.0/go.mod h1:5C2ZWiW0ErCdrYzpqxLbTX7MG14M9iiw8DgHncVwcsE=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
