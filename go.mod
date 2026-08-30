@@ -12,5 +12,5 @@ require (
 	github.com/asticode/go-astikit v0.30.0 // indirect
 	github.com/asticode/go-astits v1.16.0 // indirect
 	github.com/at-wat/ebml-go v0.19.0 // indirect
-	github.com/go-avkit/avkit v0.0.0-20260822082210-a77a82116774
+	github.com/go-avkit/avkit v0.0.0-20260830075046-b4a21e4c66af
 )
