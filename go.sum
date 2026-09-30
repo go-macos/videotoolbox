@@ -1,5 +1,5 @@
-github.com/Eyevinn/mp4ff v0.56.0 h1:K81hqadHOLqQP+Rr610dwy7Cn3tLLEejCljzIfcNo+k=
-github.com/Eyevinn/mp4ff v0.56.0/go.mod h1:AhC+bOI7GSZmzuN4zFY9U76qMedbHI+8BdQXWrC9+8U=
+github.com/Eyevinn/mp4ff v0.57.0 h1:/Gr4a5W83BcXyoFZSWSGGGjb5Yq1oYZGtHCnZ0i5hEg=
+github.com/Eyevinn/mp4ff v0.57.0/go.mod h1:3EZTsioPJ4xTLZEBBkVWoyd7UHnGp4vzwoEJ7lmr3CQ=
 github.com/asticode/go-astikit v0.30.0 h1:DkBkRQRIxYcknlaU7W7ksNfn4gMFsB0tqMJflxkRsZA=
 github.com/asticode/go-astikit v0.30.0/go.mod h1:h4ly7idim1tNhaVkdVBeXQZEE3L0xblP7fCWbgwipF0=
 github.com/asticode/go-astits v1.16.0 h1:MgyLnG30oRiQsHWQNXA29ZS6i7UNN/OGcPdgH86JJqg=
@@ -10,8 +10,8 @@ github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/ebitengine/purego v0.11.1 h1:2zpWRSQNVKN4eKsKO9eM1ILDgWfYMY9GwqRmK6XeQ/0=
 github.com/ebitengine/purego v0.11.1/go.mod h1:DCHPP08djqhNSoTfImcnHYQRZmd0qhakvrozqaEYhGQ=
-github.com/go-avkit/avkit v0.0.0-20260918185656-b6b8c0f3c881 h1:Si88J860fdQDH9AiRXXBIq44OZltFpKJqKV1gxDbPPc=
-github.com/go-avkit/avkit v0.0.0-20260918185656-b6b8c0f3c881/go.mod h1:ENrtiAN3W9PV9XJ1oruwTEjsdbRz1ymYOYq3PC1KkFA=
+github.com/go-avkit/avkit v0.0.0-20260930110916-59e4c4f7c9bd h1:zCW3NWMCGWqieo7GFVNntGEE8TDl+9CNF3d0EaYmiTg=
+github.com/go-avkit/avkit v0.0.0-20260930110916-59e4c4f7c9bd/go.mod h1:UwzLvS21n0iafeY1pqg62ZZpqnBm2lpR+5zoPLgAO3M=
 github.com/go-macos/objc v0.10.2 h1:WX8CsDT6SbDrIT2wHAZEQBhGcpKR750llRS4oAfX9ww=
 github.com/go-macos/objc v0.10.2/go.mod h1:68hzSUlhg5bFbg1kO0z4DM6xOk4B/IofuxdlyhHHtt8=
 github.com/go-test/deep v1.1.0 h1:WOcxcdHcvdgThNXjw0t76K42FXTU7HpNQWHpA2HHNlg=
