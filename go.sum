@@ -10,10 +10,10 @@ github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/ebitengine/purego v0.11.1 h1:2zpWRSQNVKN4eKsKO9eM1ILDgWfYMY9GwqRmK6XeQ/0=
 github.com/ebitengine/purego v0.11.1/go.mod h1:DCHPP08djqhNSoTfImcnHYQRZmd0qhakvrozqaEYhGQ=
-github.com/go-avkit/avkit v0.0.0-20261001205337-ea1f0e0cdd7b h1:gHXlDJ7nvEhFMbw5g77zVUeE7EueB6tAOcBrZ5snrV4=
-github.com/go-avkit/avkit v0.0.0-20261001205337-ea1f0e0cdd7b/go.mod h1:XZ77hOMI7nk3U5bncNItdqS/O3ErTYBRIWu5iVJNbu4=
-github.com/go-macos/objc v0.10.2 h1:WX8CsDT6SbDrIT2wHAZEQBhGcpKR750llRS4oAfX9ww=
-github.com/go-macos/objc v0.10.2/go.mod h1:68hzSUlhg5bFbg1kO0z4DM6xOk4B/IofuxdlyhHHtt8=
+github.com/go-avkit/avkit v0.4.1 h1:pgKlxfjauUcKF4t2JIJud6MCjq0AwEZnDpvOhJ7X04Q=
+github.com/go-avkit/avkit v0.4.1/go.mod h1:yKkijZfiXW2PzWHvZSo8jOYklzk54Uc0x7m2+MPlL0I=
+github.com/go-macos/objc v0.11.0 h1:YnSZbQDR0nXSuGwEKr+BaY14Jevw5uRHTrry4l5P4d0=
+github.com/go-macos/objc v0.11.0/go.mod h1:G2YcKu5C2Xs08vcM/CUUUeYUi9YeCHmkWcW+5RGwE/g=
 github.com/go-test/deep v1.1.0 h1:WOcxcdHcvdgThNXjw0t76K42FXTU7HpNQWHpA2HHNlg=
 github.com/go-test/deep v1.1.0/go.mod h1:5C2ZWiW0ErCdrYzpqxLbTX7MG14M9iiw8DgHncVwcsE=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
