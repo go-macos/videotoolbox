@@ -4,12 +4,12 @@ go 1.27.1
 
 require (
 	github.com/ebitengine/purego v0.11.1
-	github.com/go-avkit/avkit v0.4.1
+	github.com/go-avkit/avkit v0.9.0
 	github.com/go-macos/objc v0.11.0
 )
 
 require (
-	github.com/Eyevinn/mp4ff v0.57.0 // indirect
+	github.com/Eyevinn/mp4ff v0.58.0 // indirect
 	github.com/asticode/go-astikit v0.30.0 // indirect
 	github.com/asticode/go-astits v1.16.0 // indirect
 	github.com/at-wat/ebml-go v0.19.4 // indirect
