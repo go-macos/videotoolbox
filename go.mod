@@ -5,7 +5,7 @@ go 1.27.1
 require (
 	github.com/ebitengine/purego v0.11.1
 	github.com/go-avkit/avkit v0.9.0
-	github.com/go-macos/objc v0.11.0
+	github.com/go-macos/objc v0.11.2
 )
 
 require (
